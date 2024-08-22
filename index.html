@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>State of California</title>
+</head>
+<body>
+    <nav>
+        <div class="img-link">
+            <a href="index.html">
+                <img src="images/cali-logo.png" alt="State of California Logo">
+            </a>
+        </div>
+        <div class="link-items">
+            <div class="dropdown">
+                <button class="dropbtn">Cities</button>
+                <div class="dropdown-content">
+                    <a href="sacramento.html">Sacramento</a>
+                    <a href="san-francisco.html">San Francisco</a>
+                    <a href="los-angeles.html">Los Angeles</a>
+                </div>
+            </div>
+            <a href="">Services</a>
+            <a href="">Administration</a>
+            <a href="">Visit</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="images/cali-banner.jpg" alt="Banner Image">
+    </div>
+    <header>
+        <div>
+            <h1>State of California</h1>
+            <p>Welcome to the official website of the State of California. Here you can find information about the state, its cities, services, administration, and more. Explore the site to learn more about the Golden State.</p>
+        </div>
+        <img src="images/cali-seal.png" alt="State of California Seal">
+    </header>
+    <main>
+        <section>
+            <div class="img-aside">
+                <img src="images/cali-gdp-pie.png" alt="California GDP Pie Chart">
+                <aside>Top Five State Industries as a Percent of Total GDP, 2023</aside>
+            </div>
+            <div>
+                <p>
+                    California is a state in the Western United States, lying on the American Pacific Coast. It borders Oregon to the north, Nevada and Arizona to the east, and the Mexico to the south. With 39 million residents across an area of 163,696 square miles (423,970 km2), it is the most populous U.S. state, the third-largest by area, and most populated subnational entity in North America. The Greater Los Angeles and San Francisco Bay areas are the nation's second- and fifth-most populous urban regions, with 19 million and 10 million residents respectively. Los Angeles is the state's most populous city and the nation's second-most, after New York. Sacramento, California's capital, is located in the Central Valley.
+                </p>
+            </div>
+        </section>
+    </main>
+    <section class="message-form">
+        <form>
+            <div id="contact-label">
+                <h2>Contact Us</h2>
+                <p>Have a question or comment? Fill out the form below to get in touch with us.</p>
+            </div>
+            <div id="name-input">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" placeholder="Enter your first name">
+            </div>
+            <div id="name-input">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Enter your last name">
+            </div>
+            <div id="email-input">
+                <label for="email">Email:</label>
+                <p id="email-match"></p>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div id="email-input">
+                <label for="confirm-email">Confirm Email:</label>
+                <input type="email" id="confirm-email" placeholder="Confirm your email">
+            </div>
+            <div id="message-input">
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            const emailInput = document.getElementById('email');
+            const confirmEmailInput = document.getElementById('confirm-email');
+            const emailMatch = document.getElementById('email-match');
+
+            confirmEmailInput.addEventListener('focusout', validateEmail);
+
+            function validateEmail() {
+                if (confirmEmailInput.value !== '')
+                {
+                    if (emailInput.value === confirmEmailInput.value) {
+                        emailInput.style.border = '2px solid green';
+                        confirmEmailInput.style.border = '2px solid green';
+                        emailMatch.innerHTML = 'Emails match &#128504;';
+                        emailMatch.style.color = 'green';
+                    } else {
+                        emailInput.style.border = '2px solid red';
+                        confirmEmailInput.style.border = '2px solid red';
+                        emailMatch.innerHTML = 'Emails do not match &#128500;';
+                        emailMatch.style.color = 'red';
+                    }
+                }
+            }
+        </script>
+    </section>
+</body>
+</html>

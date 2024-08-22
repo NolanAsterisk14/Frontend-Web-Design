@@ -1,0 +1,374 @@
+:root {
+    --button-bg-color: #0071ce;
+    --button-bg-color-hover: #01548b;
+    --body-bg-color: #d7ecff;
+    --accent-bg-color: #5e9bd3;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-bg-color);
+    font-family: "Spectral", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: calc(12px + (1vw / 3));
+}
+
+/*Nav bar styling*/
+nav {
+    width: 100%;
+    border: 1px solid black;
+    background-color: var(--accent-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-items {
+    width: 50%;
+    max-width: 65em;
+    min-width: 40em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link-items a {
+    text-decoration: none;
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 10px 16px;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-radius: 5px;
+}
+
+.link-items a:hover {
+    background-color: var(--button-bg-color-hover);
+    cursor: pointer;
+}
+
+.img-link {
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: -5%;
+    margin-right: 5%;
+}
+
+.img-link a {
+    height: 80px;
+    display: flex;
+}
+
+/* Dropdown menu functionality */
+.dropbtn {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 10px 16px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    border: none;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 5px;
+}
+
+.dropbtn:hover {
+    background-color: var(--button-bg-color-hover);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    background-color: #f9f9f9;
+    padding: 12px 16px;
+    border: none;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Banner styling*/
+.banner {
+    width: 100%;
+    background-color: black;
+}
+
+.banner img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Header styling*/
+header {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(70, 141, 207) 0%, rgb(133, 196, 255) 100%);
+    padding: 10px 0;
+    border-bottom: 5px ridge black;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header div {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    width: 100%;
+}
+
+header img {
+    width: 20%;
+    max-width: 300px;
+}
+
+header p {
+    font-size: 1.4em;
+    width: 100%;
+    padding: 2% 0%;
+}
+
+.city-header div {
+    width: 50%;
+}
+
+.city-header img {
+    width: 25%;
+    max-width: 500px;
+}
+
+.city-header div + img {
+    width: 20%;
+    max-width: 300px;
+}
+
+/*Main content styling*/
+main section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 5px ridge black;
+}
+
+main p {
+    width: 100%;
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main sub {
+    font-size: 1em;
+    font-style: italic;
+    margin-top: -10px;
+}
+
+main img {
+    width: 100%;
+}
+
+main div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main ol,
+main ul {
+    margin-right: 10%;
+    font-size: calc(20px + (1vw / 3));
+    text-align: left;
+}
+
+.u-list {
+    width: 35%;
+}
+
+.img-aside {
+    width: 40%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main aside {
+    width: 90%;
+    font-style: italic;
+    border-top: 3px solid black;
+    box-shadow: inset 0px 10px 5px -10px black;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+/*Table styling*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table caption,
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid var(--accent-bg-color);
+}
+
+table caption {
+    background-color: var(--button-bg-color-hover);
+    color: white;
+    font-weight: bold;
+}
+
+table th {
+    background-color: var(--button-bg-color);
+    color: white;
+    font-weight: bold;
+}
+
+table td {
+    background-color: var(--body-bg-color);
+    color: black;
+}
+
+table tr:hover td {
+    background-color: var(--button-bg-color-hover);
+    color: white;
+}
+
+/*Message form styling*/
+.message-form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--accent-bg-color);
+}
+
+.message-form form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--body-bg-color);
+}
+
+.message-form label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.message-form input[type="text"],
+.message-form input[type="email"],
+.message-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.message-form input[type="text"]:focus,
+.message-form input[type="email"]:focus,
+.message-form textarea:focus {
+    border-color: var(--button-bg-color);
+    outline: none;
+}
+
+.message-form textarea {
+    height: 70px;
+}
+
+.message-form button {
+    background-color: var(--button-bg-color);
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.message-form button:hover {
+    background-color: var(--button-bg-color-hover);
+}
+
+#contact-label {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#contact-label p {
+    margin-top: -15px;
+}
+
+#name-input, #email-input {
+    width: 22%;
+    min-width: 200px;
+}
+
+#message-input {
+    width: 65%;
+    max-width: 1000px;
+}
+
+#email-match {
+    float: right;
+    margin: 0;
+}
+
+/*Footer styling*/
+footer {
+    width: 100%;
+    background-color: var(--accent-bg-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
